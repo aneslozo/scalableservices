@@ -1,0 +1,11 @@
+
+
+
+1. TASK - DEVELOPER 1
+	Implement GetValues search endpoint - passing a string as a param
+2. TASK - DEVELOPER 2
+	Move values to the shared resource ( Simulate with static ) / Noticed that it could be nice to do as code refactoring
+
+3. TASK - DEVELOPER 3
+ 	Implement AddValue endpoint passing a string to be added to the collection and return latest collection
+	
