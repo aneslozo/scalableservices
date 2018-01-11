@@ -9,27 +9,20 @@ namespace app.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private static IEnumerable<string> _values = new string[] { "irfan", "muhamed", "tarik" };
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
-        {   
-            Console.WriteLine($"Get called, reponse: { string.Join(",", _values) }");
-            return  _values;
+        {
+            var response = new string[] { "irfan", "muhamed", "tarik" };
+            Console.WriteLine($"Get called, reponse: { string.Join(",", response) }");
+            return  response;
         }
 
         // GET api/values/5
-        [HttpGet("search/{val}")]
-        public IEnumerable<string> GetValues(string val)
+        [HttpGet("{id}")]
+        public string Get(int id)
         {
-            return _values.Where(a=> a.Contains(val)) ;
-        }
-
-        [HttpGet("add/{val}")]
-        public IEnumerable<string> AddValue(string val)
-        {
-           _values = _values.Append(val);
-           return _values;
+            return "value";
         }
 
         // POST api/values
